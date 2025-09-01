@@ -1,0 +1,41 @@
+@startuml
+class User {
+  - nome : Francisco
+  - idade : 18  
+  - Gênero : Masculino
+  - Altura : 1,75 CM
+}
+
+class Rotina {
+  - Academia
+  - Trabalho
+  - Faculdade
+}
+
+class Escolaridade {
+  - Facens ADS 
+  - ETEC Mecânica
+}
+
+class OqueGosta {
+  - Basquete
+  - Tecnologia
+  - Motos
+  - Games
+  - Festas
+}
+
+class ArtistasFav {
+  - Jotapê
+  - BXD Neo
+  - Veigh
+  - Teto
+}
+
+' Relações com cardinalidade
+User "1" --> "*" Rotina : possui >
+User "1" --> "*" Escolaridade : estudou em >
+User "1" --> "*" OqueGosta : gosta de >
+User "1" --> "*" ArtistasFav : ouve >
+
+@enduml
